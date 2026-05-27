@@ -1,0 +1,123 @@
+site_name: 2026 MCM/ICM C题面试准备文档
+site_description: Dancing with the Stars 项目面试准备材料 - 贝叶斯推断、MCMC、混合效应模型、投票系统设计
+site_author: TwinklerG
+copyright: Copyright &copy; 2026 TwinklerG
+
+repo_name: 2026-MCM-C
+repo_url: https://github.com/TwinklerG/2026-MCM-C
+edit_uri: blob/main/docs/
+
+docs_dir: docs
+
+nav:
+  - 首页: index.md
+  - 项目文档:
+    - 需求文档: proposal.md
+    - 需求澄清: qa.md
+    - 任务清单: tasks.md
+  - 核心学习:
+    - 知识点库: knowledge_base.md
+    - 面试题库: interview_questions.md
+  - 面试准备:
+    - 项目介绍话术: elevator_pitch.md
+    - 模型对比: model_comparison.md
+    - 弱点防守: weakness_defense.md
+
+theme:
+  name: material
+  language: zh
+  palette:
+    # 浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    # 深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+    - search.highlight
+    - search.share
+    - header.autohide
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/TwinklerG
+  generator: false
+
+plugins:
+  - search:
+      lang: zh
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  # 基础扩展
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  # Python-Markdown 扩展
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      hide_protocol: true
+      repo_url_shortener: true
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# 数学公式支持
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# 额外 CSS
+extra_css:
+  - stylesheets/extra.css
